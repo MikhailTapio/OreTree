@@ -2,6 +2,7 @@ package com.teamfractal.ore_tree.common.block.init;
 
 import com.teamfractal.ore_tree.common.block.base.OreInlaidLogBlock;
 import com.teamfractal.ore_tree.common.block.base.OreSaplingBlock;
+import com.teamfractal.ore_tree.common.config.OTCommonConfig;
 import com.teamfractal.ore_tree.common.util.OTRegistryHandler;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -43,28 +44,28 @@ public class OTBlocks {
         quartzTreeLog = OTRegistryHandler.Blocks.register("quartz_tree_log", OreInlaidLogBlock::new);
         redstoneTreeLog = OTRegistryHandler.Blocks.register("redstone_tree_log", OreInlaidLogBlock::new);
         coalTreeSapling = OTRegistryHandler.Blocks.register("coal_tree_sapling"
-                ,() -> new OreSaplingBlock(Items.COAL, BlockTags.COAL_ORES, 0.9, 0.9, new ResourceLocation("ore_tree", "coal_tree"))
+                ,() -> new OreSaplingBlock(Items.COAL, BlockTags.COAL_ORES, OTCommonConfig.COAL_TICK.get(), OTCommonConfig.COAL_CATALYZE.get(), new ResourceLocation("ore_tree", "coal_tree"))
         );
         diamondTreeSapling = OTRegistryHandler.Blocks.register("diamond_tree_sapling"
-                ,() -> new OreSaplingBlock(Items.DIAMOND, BlockTags.DIAMOND_ORES, 0.5, 0.4, new ResourceLocation("ore_tree", "diamond_tree"))
+                ,() -> new OreSaplingBlock(Items.DIAMOND, BlockTags.DIAMOND_ORES, OTCommonConfig.DIAMOND_TICK.get(), OTCommonConfig.DIAMOND_CATALYZE.get(), new ResourceLocation("ore_tree", "diamond_tree"))
         );
         emeraldTreeSapling = OTRegistryHandler.Blocks.register("emerald_tree_sapling"
-                ,() -> new OreSaplingBlock(Items.EMERALD, BlockTags.EMERALD_ORES, 0.8, 0.7, new ResourceLocation("ore_tree", "emerald_tree"))
+                ,() -> new OreSaplingBlock(Items.EMERALD, BlockTags.EMERALD_ORES, OTCommonConfig.EMERALD_TICK.get(), OTCommonConfig.EMERALD_CATALYZE.get(), new ResourceLocation("ore_tree", "emerald_tree"))
         );
         goldTreeSapling = OTRegistryHandler.Blocks.register("gold_tree_sapling"
-                ,() -> new OreSaplingBlock(Items.GOLD_INGOT, BlockTags.GOLD_ORES, 0.8, 0.5, new ResourceLocation("ore_tree", "gold_tree"))
+                ,() -> new OreSaplingBlock(Items.GOLD_INGOT, BlockTags.GOLD_ORES, OTCommonConfig.GOLD_TICK.get(), OTCommonConfig.GOLD_CATALYZE.get(), new ResourceLocation("ore_tree", "gold_tree"))
         );
         ironTreeSapling = OTRegistryHandler.Blocks.register("iron_tree_sapling"
-                ,() -> new OreSaplingBlock(Items.IRON_INGOT, BlockTags.IRON_ORES, 0.9, 0.9, new ResourceLocation("ore_tree", "iron_tree"))
+                ,() -> new OreSaplingBlock(Items.IRON_INGOT, BlockTags.IRON_ORES, OTCommonConfig.IRON_TICK.get(), OTCommonConfig.IRON_CATALYZE.get(), new ResourceLocation("ore_tree", "iron_tree"))
         );
         lapisTreeSapling = OTRegistryHandler.Blocks.register("lapis_tree_sapling"
-                ,() -> new OreSaplingBlock(Items.LAPIS_LAZULI, BlockTags.LAPIS_ORES, 0.7, 0.7, new ResourceLocation("ore_tree", "lapis_tree"))
+                ,() -> new OreSaplingBlock(Items.LAPIS_LAZULI, BlockTags.LAPIS_ORES, OTCommonConfig.LAPIS_TICK.get(), OTCommonConfig.LAPIS_CATALYZE.get(), new ResourceLocation("ore_tree", "lapis_tree"))
         );
         quartzTreeSapling = OTRegistryHandler.Blocks.register("quartz_tree_sapling"
-                ,() -> new OreSaplingBlock(Items.QUARTZ, QUARTZ_ORES, 0.7, 0.7, new ResourceLocation("ore_tree", "quartz_tree"))
+                ,() -> new OreSaplingBlock(Items.QUARTZ, QUARTZ_ORES, OTCommonConfig.QUARTZ_TICK.get(), OTCommonConfig.QUARTZ_CATALYZE.get(), new ResourceLocation("ore_tree", "quartz_tree"))
         );
         redstoneTreeSapling = OTRegistryHandler.Blocks.register("redstone_tree_sapling"
-                ,() -> new OreSaplingBlock(Items.REDSTONE, BlockTags.REDSTONE_ORES, 0.7, 0.8, new ResourceLocation("ore_tree", "redstone_tree"))
+                ,() -> new OreSaplingBlock(Items.REDSTONE, BlockTags.REDSTONE_ORES, OTCommonConfig.REDSTONE_TICK.get(), OTCommonConfig.REDSTONE_CATALYZE.get(), new ResourceLocation("ore_tree", "redstone_tree"))
         );
     }
 }

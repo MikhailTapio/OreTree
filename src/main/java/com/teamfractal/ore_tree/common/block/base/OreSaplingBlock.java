@@ -1,5 +1,7 @@
 package com.teamfractal.ore_tree.common.block.base;
 
+import com.teamfractal.ore_tree.client.config.OTClientConfig;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -121,16 +123,22 @@ public class OreSaplingBlock extends BushBlock{
         Random random = new Random();
         if(player.getItemInHand(hand).getItem() == catalystItem){
             if (!(i >= 3)) {
-                if(level instanceof ServerLevel serverLevel){
-                    if(random.nextDouble() <= randomCatalyzeValue) {
-                        serverLevel.sendParticles(ParticleTypes.HAPPY_VILLAGER,pos.getX() + 0.5,pos.getY() + 0.5,pos.getZ() + 0.5,5,0,0,0,1);
-                        serverLevel.setBlock(pos, state.setValue(AGE, i+1), 2);
+
+                if(random.nextDouble() <= randomCatalyzeValue) {
+                    if(level instanceof ServerLevel serverLevel)
+                    {
+                        serverLevel.sendParticles(ParticleTypes.HAPPY_VILLAGER, pos.getX() + 0.5, pos.getY() + 0.7, pos.getZ() + 0.5, 5, 0, 0, 0, 1);
+                        serverLevel.setBlock(pos, state.setValue(AGE, i + 1), 2);
                     }
-                    else{
-                        serverLevel.sendParticles(ParticleTypes.LARGE_SMOKE,pos.getX() + 0.5,pos.getY() + 0.5,pos.getZ() + 0.5,5,0,0,0,0);
-                    }
-                    consumeCatalyst(player, catalystItem.getDefaultInstance());
                 }
+                else if(OTClientConfig.CATALYZE_FAILURE_PARTICLE_DISPLAY.get()){
+                    if(level instanceof ClientLevel clientLevel){
+                        clientLevel.addParticle(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5, pos.getY() + 0.7, pos.getZ() + 0.5, 0, 0, 0);
+                    }
+                }
+
+                consumeCatalyst(player, catalystItem.getDefaultInstance());
+
             }else{
                 if(tryPlace(level,treeNBTLocation,pos)) {
                     consumeCatalyst(player, catalystItem.getDefaultInstance());
