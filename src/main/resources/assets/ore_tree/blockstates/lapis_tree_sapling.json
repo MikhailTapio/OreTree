@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ore_tree:block/lapis_tree_sapling"
+    }
+  }
+}

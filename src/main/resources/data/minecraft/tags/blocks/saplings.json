@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "ore_tree:coal_tree_sapling",
+    "ore_tree:diamond_tree_sapling",
+    "ore_tree:emerald_tree_sapling",
+    "ore_tree:gold_tree_sapling",
+    "ore_tree:iron_tree_sapling",
+    "ore_tree:lapis_tree_sapling",
+    "ore_tree:quartz_tree_sapling",
+    "ore_tree:redstone_tree_sapling"
+  ]
+}

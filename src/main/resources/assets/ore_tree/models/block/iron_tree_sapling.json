@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ore_tree:blocks/iron_sapling",
+    "particle": "ore_tree:blocks/iron_sapling"
+  }
+}

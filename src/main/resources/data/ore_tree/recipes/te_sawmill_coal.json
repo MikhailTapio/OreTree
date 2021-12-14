@@ -1,0 +1,17 @@
+{
+  "type": "thermal:sawmill",
+  "ingredient": {
+    "item": "ore_tree:coal_tree_log"
+  },
+  "result": [
+    {
+      "item": "minecraft:coal",
+      "count": 10
+    },
+    {
+      "item": "thermal:sawdust",
+      "chance": 1.25
+    }
+  ],
+  "energy": 1000
+}

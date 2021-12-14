@@ -1,0 +1,17 @@
+{
+  "type": "thermal:sawmill",
+  "ingredient": {
+    "item": "ore_tree:gold_tree_log"
+  },
+  "result": [
+    {
+      "item": "thermal:gold_dust",
+      "count": 2
+    },
+    {
+      "item": "thermal:sawdust",
+      "chance": 1.25
+    }
+  ],
+  "energy": 1000
+}

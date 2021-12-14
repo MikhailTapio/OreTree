@@ -1,0 +1,14 @@
+{
+  "type":"mekanism:sawing",
+  "input":{
+    "ingredient":{"item":"ore_tree:coal_tree_log"}
+  },
+  "mainOutput":{
+    "item":"mekanism:dust_coal",
+    "count":10
+  },
+  "secondaryOutput":{
+    "item":"mekanism:sawdust"
+  },
+  "secondaryChance":0.75
+}
