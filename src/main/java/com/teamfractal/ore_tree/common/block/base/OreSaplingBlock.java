@@ -40,13 +40,13 @@ import static com.teamfractal.ore_tree.common.action.OreTreePlacement.consumeCat
 import static com.teamfractal.ore_tree.common.action.OreTreePlacement.tryPlace;
 
 public class OreSaplingBlock extends BushBlock{
-    public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
+    private static final IntegerProperty AGE = BlockStateProperties.AGE_3;
+    private static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
     private final Item catalystItem;
     private final Tag<Block> rootable;
     private final double randomTickValue;
     private final double randomCatalyzeValue;
     private final ResourceLocation treeNBTLocation;
-    private static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
     public OreSaplingBlock(Item catalystItem, Tag<Block> rootable, double randomTickValue, double randomCatalyzeValue, ResourceLocation treeNBTLocation) {
         super(Properties.of(Material.PLANT).randomTicks().noCollission().sound(SoundType.GRASS).instabreak());
         this.catalystItem = catalystItem;

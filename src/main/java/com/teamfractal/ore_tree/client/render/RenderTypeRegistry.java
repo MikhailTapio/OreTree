@@ -14,6 +14,7 @@ public class RenderTypeRegistry {
     public static void onRenderTypeSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(OTBlocks.coalTreeSapling.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(OTBlocks.copperTreeSapling.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(OTBlocks.diamondTreeSapling.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(OTBlocks.emeraldTreeSapling.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(OTBlocks.goldTreeSapling.get(), RenderType.cutout());

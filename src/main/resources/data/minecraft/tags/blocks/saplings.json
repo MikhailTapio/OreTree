@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "ore_tree:coal_tree_sapling",
+    "ore_tree:copper_tree_sapling",
     "ore_tree:diamond_tree_sapling",
     "ore_tree:emerald_tree_sapling",
     "ore_tree:gold_tree_sapling",

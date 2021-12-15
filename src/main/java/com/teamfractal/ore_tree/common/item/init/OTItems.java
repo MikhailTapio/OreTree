@@ -10,6 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class OTItems {
 
     public static RegistryObject<Item> coalTreeLog;
+    public static RegistryObject<Item> copperTreeLog;
     public static RegistryObject<Item> diamondTreeLog;
     public static RegistryObject<Item> emeraldTreeLog;
     public static RegistryObject<Item> goldTreeLog;
@@ -18,6 +19,7 @@ public class OTItems {
     public static RegistryObject<Item> quartzTreeLog;
     public static RegistryObject<Item> redstoneTreeLog;
     public static RegistryObject<Item> coalTreeSapling;
+    public static RegistryObject<Item> copperTreeSapling;
     public static RegistryObject<Item> diamondTreeSapling;
     public static RegistryObject<Item> emeraldTreeSapling;
     public static RegistryObject<Item> goldTreeSapling;
@@ -29,6 +31,8 @@ public class OTItems {
     public static void register(){
         coalTreeLog = OTRegistryHandler.Items.register("coal_tree_log"
                 ,() -> new BlockItem(OTBlocks.coalTreeLog.get(), new Item.Properties().tab(OTTabs.MAIN)));
+        copperTreeLog = OTRegistryHandler.Items.register("copper_tree_log"
+                ,() -> new BlockItem(OTBlocks.copperTreeLog.get(), new Item.Properties().tab(OTTabs.MAIN)));
         diamondTreeLog = OTRegistryHandler.Items.register("diamond_tree_log"
                 ,() -> new BlockItem(OTBlocks.diamondTreeLog.get(), new Item.Properties().tab(OTTabs.MAIN)));
         emeraldTreeLog = OTRegistryHandler.Items.register("emerald_tree_log"
@@ -45,6 +49,8 @@ public class OTItems {
                 ,() -> new BlockItem(OTBlocks.redstoneTreeLog.get(), new Item.Properties().tab(OTTabs.MAIN)));
         coalTreeSapling = OTRegistryHandler.Items.register("coal_tree_sapling"
                 ,() -> new BlockItem(OTBlocks.coalTreeSapling.get(), new Item.Properties().tab(OTTabs.MAIN)));
+        copperTreeSapling = OTRegistryHandler.Items.register("copper_tree_sapling"
+                ,() -> new BlockItem(OTBlocks.copperTreeSapling.get(), new Item.Properties().tab(OTTabs.MAIN)));
         diamondTreeSapling = OTRegistryHandler.Items.register("diamond_tree_sapling"
                 ,() -> new BlockItem(OTBlocks.diamondTreeSapling.get(), new Item.Properties().tab(OTTabs.MAIN)));
         emeraldTreeSapling = OTRegistryHandler.Items.register("emerald_tree_sapling"

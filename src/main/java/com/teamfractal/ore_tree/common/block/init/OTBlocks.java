@@ -18,6 +18,7 @@ public class OTBlocks {
     public static final Tag.Named<Block> QUARTZ_ORES = bind("quartz_ores");
 
     public static RegistryObject<Block> coalTreeLog;
+    public static RegistryObject<Block> copperTreeLog;
     public static RegistryObject<Block> diamondTreeLog;
     public static RegistryObject<Block> emeraldTreeLog;
     public static RegistryObject<Block> goldTreeLog;
@@ -26,6 +27,7 @@ public class OTBlocks {
     public static RegistryObject<Block> quartzTreeLog;
     public static RegistryObject<Block> redstoneTreeLog;
     public static RegistryObject<Block> coalTreeSapling;
+    public static RegistryObject<Block> copperTreeSapling;
     public static RegistryObject<Block> diamondTreeSapling;
     public static RegistryObject<Block> emeraldTreeSapling;
     public static RegistryObject<Block> goldTreeSapling;
@@ -36,6 +38,7 @@ public class OTBlocks {
 
     public static void register(){
         coalTreeLog = OTRegistryHandler.Blocks.register("coal_tree_log", OreInlaidLogBlock::new);
+        copperTreeLog = OTRegistryHandler.Blocks.register("copper_tree_log", OreInlaidLogBlock::new);
         diamondTreeLog = OTRegistryHandler.Blocks.register("diamond_tree_log", OreInlaidLogBlock::new);
         emeraldTreeLog = OTRegistryHandler.Blocks.register("emerald_tree_log", OreInlaidLogBlock::new);
         goldTreeLog = OTRegistryHandler.Blocks.register("gold_tree_log", OreInlaidLogBlock::new);
@@ -45,6 +48,9 @@ public class OTBlocks {
         redstoneTreeLog = OTRegistryHandler.Blocks.register("redstone_tree_log", OreInlaidLogBlock::new);
         coalTreeSapling = OTRegistryHandler.Blocks.register("coal_tree_sapling"
                 ,() -> new OreSaplingBlock(Items.COAL, BlockTags.COAL_ORES, OTCommonConfig.COAL_TICK.get(), OTCommonConfig.COAL_CATALYZE.get(), new ResourceLocation("ore_tree", "coal_tree"))
+        );
+        copperTreeSapling = OTRegistryHandler.Blocks.register("copper_tree_sapling"
+                ,() -> new OreSaplingBlock(Items.COPPER_INGOT, BlockTags.COPPER_ORES, OTCommonConfig.COPPER_TICK.get(), OTCommonConfig.COPPER_CATALYZE.get(), new ResourceLocation("ore_tree", "copper_tree"))
         );
         diamondTreeSapling = OTRegistryHandler.Blocks.register("diamond_tree_sapling"
                 ,() -> new OreSaplingBlock(Items.DIAMOND, BlockTags.DIAMOND_ORES, OTCommonConfig.DIAMOND_TICK.get(), OTCommonConfig.DIAMOND_CATALYZE.get(), new ResourceLocation("ore_tree", "diamond_tree"))
