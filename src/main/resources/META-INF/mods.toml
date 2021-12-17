@@ -1,0 +1,19 @@
+
+modLoader="javafml"
+loaderVersion="[37,)"
+license="GPLv3.0"
+[[mods]]
+modId="ore_tree"
+version="0.2.1"
+displayName="Ore Tree"
+credits=""
+authors="Wugui.sp,Tapio"
+logoFile="logo.png"
+description='''
+'''
+[[dependencies.ore_tree]]
+    modId="forge"
+    mandatory=true
+    versionRange="[37,)"
+    ordering="NONE"
+    side="BOTH"

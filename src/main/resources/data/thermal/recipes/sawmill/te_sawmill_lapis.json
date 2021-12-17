@@ -1,0 +1,17 @@
+{
+  "type": "thermal:sawmill",
+  "ingredient": {
+    "item": "ore_tree:lapis_tree_log"
+  },
+  "result": [
+    {
+      "item": "minecraft:lapis_lazuli",
+      "count": 2
+    },
+    {
+      "item": "thermal:sawdust",
+      "chance": 1.25
+    }
+  ],
+  "energy": 1000
+}

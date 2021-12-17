@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "ore_tree:coal_tree_log",
+    "ore_tree:copper_tree_log",
+    "ore_tree:diamond_tree_log",
+    "ore_tree:emerald_tree_log",
+    "ore_tree:gold_tree_log",
+    "ore_tree:iron_tree_log",
+    "ore_tree:lapis_tree_log",
+    "ore_tree:quartz_tree_log",
+    "ore_tree:redstone_tree_log"
+  ]
+}

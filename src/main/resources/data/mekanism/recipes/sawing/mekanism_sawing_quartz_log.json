@@ -1,0 +1,14 @@
+{
+  "type":"mekanism:sawing",
+  "input":{
+    "ingredient":{"item":"ore_tree:quartz_tree_log"}
+  },
+  "mainOutput":{
+    "item":"mekanism:dust_quartz",
+    "count":2
+  },
+  "secondaryOutput":{
+    "item":"mekanism:sawdust"
+  },
+  "secondaryChance":0.75
+}
