@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ore_tree:block/copper_tree_sapling"
+    }
+  }
+}

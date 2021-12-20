@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ore_tree:block/diamond_tree_log"
+    }
+  }
+}

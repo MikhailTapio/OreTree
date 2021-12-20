@@ -1,0 +1,16 @@
+{
+  "group": "ore_tree",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:saplings"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "item": "ore_tree:redstone_tree_sapling",
+    "count": 1
+  }
+}

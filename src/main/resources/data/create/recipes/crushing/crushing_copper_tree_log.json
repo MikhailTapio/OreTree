@@ -1,0 +1,24 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "ore_tree:copper_tree_log"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:crushed_copper_ore",
+      "count": 1
+    },
+    {
+      "item": "create:crushed_copper_ore",
+      "count": 1,
+      "chance": 0.5
+    },
+    {
+      "item": "minecraft:stick",
+      "chance": 0.5
+    }
+  ],
+  "processingTime": 300
+}
