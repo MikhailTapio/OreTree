@@ -83,7 +83,7 @@ public class OreSaplingBlock extends BushBlock{
     @Nonnull
     @Override
     public List<ItemStack> getDrops(@Nonnull BlockState state, @Nonnull LootContext.Builder builder) {
-        List<ItemStack> dropsOriginal = super.getDrops(state, builder);
+        final List<ItemStack> dropsOriginal = super.getDrops(state, builder);
         if (!dropsOriginal.isEmpty())
             return dropsOriginal;
         return Collections.singletonList(new ItemStack(this, 1));
@@ -105,7 +105,7 @@ public class OreSaplingBlock extends BushBlock{
     }
 
     public void randomTick(BlockState state, @Nonnull ServerLevel world, @Nonnull BlockPos pos, @Nonnull Random random) {
-        int i = state.getValue(AGE);
+        final int i = state.getValue(AGE);
 
         if(random.nextDouble() <= randomTickValue && world.getBrightness(LightLayer.SKY, pos.above()) - world.getSkyDarken() >= 9)
         {
@@ -119,8 +119,8 @@ public class OreSaplingBlock extends BushBlock{
 
     @Nonnull
     public InteractionResult use(@Nonnull BlockState state, @Nonnull Level level, @Nonnull BlockPos pos, @Nonnull Player player, @Nonnull InteractionHand hand, @Nonnull BlockHitResult trace) {
-        int i = state.getValue(AGE);
-        Random random = new Random();
+        final int i = state.getValue(AGE);
+        final Random random = level.random;
         if(player.getItemInHand(hand).getItem() == catalystItem){
             if (!(i >= 3)) {
 
@@ -136,9 +136,7 @@ public class OreSaplingBlock extends BushBlock{
                         clientLevel.addParticle(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5, pos.getY() + 0.7, pos.getZ() + 0.5, 0, 0, 0);
                     }
                 }
-
                 consumeCatalyst(player, catalystItem.getDefaultInstance());
-
             }else{
                 if(tryPlace(level,treeNBTLocation,pos)) {
                     consumeCatalyst(player, catalystItem.getDefaultInstance());

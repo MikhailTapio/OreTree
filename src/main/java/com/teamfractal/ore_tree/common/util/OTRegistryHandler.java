@@ -19,7 +19,7 @@ public class OTRegistryHandler {
     public static final DeferredRegister<Block> Blocks = DeferredRegister.create(ForgeRegistries.BLOCKS, OreTree.MODID);
 
     public static void register(){
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        final IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         OTBlocks.register();
         OTItems.register();

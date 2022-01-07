@@ -31,7 +31,7 @@ public class OreInlaidLogBlock extends Block {
     @Nonnull
     @Override
     public List<ItemStack> getDrops(@Nonnull BlockState state, @Nonnull LootContext.Builder builder) {
-        List<ItemStack> dropsOriginal = super.getDrops(state, builder);
+        final List<ItemStack> dropsOriginal = super.getDrops(state, builder);
         if (!dropsOriginal.isEmpty())
             return dropsOriginal;
         return Collections.singletonList(new ItemStack(this, 1));

@@ -29,10 +29,10 @@ public class OreTreePlacement {
         if(readyForPlacement(level,pos)) {
             if(level instanceof ServerLevel serverLevel){
                 serverLevel.setBlock(pos, Blocks.AIR.defaultBlockState(),2);
-                StructureTemplate structure = serverLevel.getStructureManager().getOrCreate(loc);
-                int x = pos.getX() - 2;
-                int y = pos.getY();
-                int z = pos.getZ() - 2;
+                final StructureTemplate structure = serverLevel.getStructureManager().getOrCreate(loc);
+                final int x = pos.getX() - 2;
+                final int y = pos.getY();
+                final int z = pos.getZ() - 2;
                 structure.placeInWorld(serverLevel, new BlockPos(x, y, z),
                         new BlockPos(x, y, z),
                         new StructurePlaceSettings().setIgnoreEntities(false),
@@ -45,9 +45,9 @@ public class OreTreePlacement {
 
     private static boolean readyForPlacement(Level level, BlockPos pos){
         boolean result = true;
-        double sx = 0;
-        double sy;
-        double sz;
+        int sx = 0;
+        int sy;
+        int sz;
         for (int y = 0; y < 5 && result; y++) {
             sy = 1;
             for (int z = 0; z < 5 && result; z++) {

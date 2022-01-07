@@ -7,7 +7,7 @@ public class OTClientConfig {
     public static final ForgeConfigSpec.BooleanValue CATALYZE_FAILURE_PARTICLE_DISPLAY;
 
     static{
-        ForgeConfigSpec.Builder CLIENT_BUILDER = new ForgeConfigSpec.Builder();
+        final ForgeConfigSpec.Builder CLIENT_BUILDER = new ForgeConfigSpec.Builder();
         CLIENT_BUILDER.comment("Client Settings").push("Particle Display");
         CATALYZE_FAILURE_PARTICLE_DISPLAY = CLIENT_BUILDER.comment("Should a smoke particle be spawned when fail to catalyze?").define("particle", true);
         CLIENT_BUILDER.pop();
