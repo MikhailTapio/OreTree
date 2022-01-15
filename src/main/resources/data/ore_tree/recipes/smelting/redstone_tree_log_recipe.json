@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "ore_tree:redstone_tree_log"
   },
-  "result": {
-    "item": "minecraft:redstone"
-  }
+  "result": "minecraft:redstone"
 }

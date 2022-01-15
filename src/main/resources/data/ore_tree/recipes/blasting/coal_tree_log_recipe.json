@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "ore_tree:coal_tree_log"
   },
-  "result": {
-    "item": "minecraft:coal_block"
-  }
+  "result": "minecraft:coal_block"
 }

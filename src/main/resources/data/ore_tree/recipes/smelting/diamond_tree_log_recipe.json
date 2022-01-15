@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "ore_tree:diamond_tree_log"
   },
-  "result": {
-    "item": "minecraft:diamond"
-  }
+  "result": "minecraft:diamond"
 }

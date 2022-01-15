@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "ore_tree:emerald_tree_log"
   },
-  "result": {
-    "item": "minecraft:emerald"
-  }
+  "result": "minecraft:emerald"
 }

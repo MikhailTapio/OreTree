@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "ore_tree:copper_tree_log"
   },
-  "result": {
-    "item": "minecraft:copper_ingot"
-  }
+  "result": "minecraft:copper_ingot"
 }

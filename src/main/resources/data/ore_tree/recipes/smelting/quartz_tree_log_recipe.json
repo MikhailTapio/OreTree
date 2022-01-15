@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "ore_tree:quartz_tree_log"
   },
-  "result": {
-    "item": "minecraft:quartz"
-  }
+  "result": "minecraft:quartz"
 }
