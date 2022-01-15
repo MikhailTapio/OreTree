@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "ore_tree",
+  "version": "${version}",
+
+  "name": "Ore Tree",
+  "description": "",
+  "authors": [
+    "Wugui.sp",
+    "Tapio"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "GPL-V3",
+  "icon": "assets/ore_tree/logo.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.teamfractal.ore_tree.common.OreTree"
+    ],
+    "client": [
+      "com.teamfractal.ore_tree.client.OreTreeClient"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

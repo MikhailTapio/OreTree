@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ore_tree:block/iron_tree_log"
+    }
+  }
+}
