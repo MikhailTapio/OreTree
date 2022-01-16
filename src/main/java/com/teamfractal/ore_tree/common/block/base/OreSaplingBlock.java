@@ -1,7 +1,6 @@
 package com.teamfractal.ore_tree.common.block.base;
 
 import com.teamfractal.ore_tree.client.config.OTClientConfig;
-import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -132,8 +131,8 @@ public class OreSaplingBlock extends BushBlock{
                     }
                 }
                 else if(OTClientConfig.CATALYZE_FAILURE_PARTICLE_DISPLAY.get()){
-                    if(level instanceof ClientLevel clientLevel){
-                        clientLevel.addParticle(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5, pos.getY() + 0.7, pos.getZ() + 0.5, 0, 0, 0);
+                    if(level.isClientSide){
+                        level.addParticle(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5, pos.getY() + 0.7, pos.getZ() + 0.5, 0, 0, 0);
                     }
                 }
                 consumeCatalyst(player, catalystItem.getDefaultInstance());
