@@ -1,7 +1,6 @@
 package com.teamfractal.ore_tree.common.block.base;
 
 import com.teamfractal.ore_tree.client.config.OTClientConfig;
-import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -83,7 +82,7 @@ public class OreSaplingBlock extends BushBlock{
     @Nonnull
     @Override
     public List<ItemStack> getDrops(@Nonnull BlockState state, @Nonnull LootContext.Builder builder) {
-        List<ItemStack> dropsOriginal = super.getDrops(state, builder);
+        final List<ItemStack> dropsOriginal = super.getDrops(state, builder);
         if (!dropsOriginal.isEmpty())
             return dropsOriginal;
         return Collections.singletonList(new ItemStack(this, 1));
@@ -105,7 +104,7 @@ public class OreSaplingBlock extends BushBlock{
     }
 
     public void randomTick(BlockState state, @Nonnull ServerLevel world, @Nonnull BlockPos pos, @Nonnull Random random) {
-        int i = state.getValue(AGE);
+        final int i = state.getValue(AGE);
 
         if(random.nextDouble() <= randomTickValue && world.getBrightness(LightLayer.SKY, pos.above()) - world.getSkyDarken() >= 9)
         {
@@ -119,8 +118,8 @@ public class OreSaplingBlock extends BushBlock{
 
     @Nonnull
     public InteractionResult use(@Nonnull BlockState state, @Nonnull Level level, @Nonnull BlockPos pos, @Nonnull Player player, @Nonnull InteractionHand hand, @Nonnull BlockHitResult trace) {
-        int i = state.getValue(AGE);
-        Random random = new Random();
+        final int i = state.getValue(AGE);
+        final Random random = level.random;
         if(player.getItemInHand(hand).getItem() == catalystItem){
             if (!(i >= 3)) {
 
@@ -132,8 +131,8 @@ public class OreSaplingBlock extends BushBlock{
                     }
                 }
                 else if(OTClientConfig.CATALYZE_FAILURE_PARTICLE_DISPLAY.get()){
-                    if(level instanceof ClientLevel clientLevel){
-                        clientLevel.addParticle(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5, pos.getY() + 0.7, pos.getZ() + 0.5, 0, 0, 0);
+                    if(level.isClientSide){
+                        level.addParticle(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5, pos.getY() + 0.7, pos.getZ() + 0.5, 0, 0, 0);
                     }
                 }
 

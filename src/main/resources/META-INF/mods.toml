@@ -4,7 +4,7 @@ loaderVersion="[37,)"
 license="GPLv3.0"
 [[mods]]
 modId="ore_tree"
-version="0.2.1"
+version="0.2.2"
 displayName="Ore Tree"
 credits=""
 authors="Wugui.sp,Tapio"
