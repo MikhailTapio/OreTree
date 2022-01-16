@@ -2,7 +2,6 @@ package com.teamfractal.ore_tree.common.block.base;
 
 
 import net.minecraft.block.*;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
@@ -97,15 +96,14 @@ public class OreSaplingBlock extends PlantBlock {
             if (!(i >= 3)) {
 
                 if(random.nextDouble() <= randomCatalyzeValue) {
-                    if(world instanceof ServerWorld serverLevel)
-                    {
+                    if(world instanceof ServerWorld serverLevel) {
                         serverLevel.spawnParticles(ParticleTypes.HAPPY_VILLAGER, pos.getX() + 0.5, pos.getY() + 0.7, pos.getZ() + 0.5, 5, 0, 0, 0, 1);
                         serverLevel.setBlockState(pos, state.with(AGE, i + 1), 2);
                     }
                 }
                 else{
-                    if(world instanceof ClientWorld clientLevel){
-                        clientLevel.addParticle(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5, pos.getY() + 0.7, pos.getZ() + 0.5, 0, 0, 0);
+                    if(world.isClient){
+                        world.addParticle(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5, pos.getY() + 0.7, pos.getZ() + 0.5, 0, 0, 0);
                     }
                 }
 
