@@ -1,11 +1,13 @@
 package com.teamfractal.ore_tree.common.block.base;
 
 import com.teamfractal.ore_tree.client.config.OTClientConfig;
+import com.teamfractal.ore_tree.common.config.OTCommonConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.Tag;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -43,6 +45,7 @@ public class OreSaplingBlock extends BushBlock{
     private static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
     private final Item catalystItem;
     private final Tag<Block> rootable;
+    private final boolean dirtable = OTCommonConfig.CAN_PLANT_ON_DIRT.get();
     private final double randomTickValue;
     private final double randomCatalyzeValue;
     private final ResourceLocation treeNBTLocation;
@@ -90,7 +93,7 @@ public class OreSaplingBlock extends BushBlock{
 
     @Override
     public boolean mayPlaceOn(BlockState groundState, @Nonnull BlockGetter worldIn, @Nonnull BlockPos pos) {
-        return groundState.is(rootable);
+        return groundState.is(rootable) || (dirtable && groundState.is(BlockTags.DIRT));
     }
 
     @Override
