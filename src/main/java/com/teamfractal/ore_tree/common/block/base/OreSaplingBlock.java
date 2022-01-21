@@ -91,7 +91,7 @@ public class OreSaplingBlock extends PlantBlock {
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         int i = state.get(AGE);
-        Random random = new Random();
+        Random random = world.random;
         if(player.getStackInHand(hand).getItem() == catalystItem){
             if (!(i >= 3)) {
 

@@ -18,8 +18,7 @@ public class OreTreePlacement {
     public static void consumeCatalyst(PlayerEntity player, ItemStack stack){
         if (player instanceof ServerPlayerEntity serverPlayer){
             if (!serverPlayer.interactionManager.getGameMode().isCreative()) {
-                player.getInventory()
-                        .removeOne(stack);
+                player.getInventory().remove(e -> e.isItemEqual(stack), 1, player.getInventory());
             }
         }
     }
