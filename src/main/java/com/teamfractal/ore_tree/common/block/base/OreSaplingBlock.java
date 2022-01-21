@@ -77,7 +77,7 @@ public class OreSaplingBlock extends PlantBlock {
     }
 
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        int i = state.get(AGE);
+        final int i = state.get(AGE);
 
         if(random.nextDouble() <= randomTickValue && world.getBaseLightLevel(pos.up(), 0)>= 9)
         {
@@ -90,14 +90,13 @@ public class OreSaplingBlock extends PlantBlock {
     }
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        int i = state.get(AGE);
-        Random random = new Random();
-        if(player.getStackInHand(hand).getItem() == catalystItem){
+        final int i = state.get(AGE);
+        final Random random = world.random;
+        if (player.getStackInHand(hand).getItem() == catalystItem) {
             if (!(i >= 3)) {
 
-                if(random.nextDouble() <= randomCatalyzeValue) {
-                    if(world instanceof ServerWorld serverLevel)
-                    {
+                if (random.nextDouble() <= randomCatalyzeValue) {
+                    if (world instanceof ServerWorld serverLevel) {
                         serverLevel.spawnParticles(ParticleTypes.HAPPY_VILLAGER, pos.getX() + 0.5, pos.getY() + 0.7, pos.getZ() + 0.5, 5, 0, 0, 0, 1);
                         serverLevel.setBlockState(pos, state.with(AGE, i + 1), 2);
                     }

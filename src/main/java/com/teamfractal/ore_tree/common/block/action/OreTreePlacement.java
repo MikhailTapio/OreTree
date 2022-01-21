@@ -18,20 +18,19 @@ public class OreTreePlacement {
     public static void consumeCatalyst(PlayerEntity player, ItemStack stack){
         if (player instanceof ServerPlayerEntity serverPlayer){
             if (!serverPlayer.interactionManager.getGameMode().isCreative()) {
-                player.getInventory()
-                        .removeOne(stack);
+                player.getInventory().remove(e -> e.isItemEqual(stack), 1, player.getInventory());
             }
         }
     }
 
     public static boolean tryPlace(World level, Identifier loc, BlockPos pos){
         if(readyForPlacement(level,pos)) {
-            if(level instanceof ServerWorld serverLevel){
-                serverLevel.setBlockState(pos, Blocks.AIR.getDefaultState(),2);
-                Structure structure = serverLevel.getStructureManager().getStructureOrBlank(loc);
-                int x = pos.getX() - 2;
-                int y = pos.getY();
-                int z = pos.getZ() - 2;
+            if(level instanceof ServerWorld serverLevel) {
+                serverLevel.setBlockState(pos, Blocks.AIR.getDefaultState(), 2);
+                final Structure structure = serverLevel.getStructureManager().getStructureOrBlank(loc);
+                final int x = pos.getX() - 2;
+                final int y = pos.getY();
+                final int z = pos.getZ() - 2;
                 structure.place(serverLevel, new BlockPos(x, y, z),
                         new BlockPos(x, y, z),
                         new StructurePlacementData().setIgnoreEntities(false),
@@ -42,11 +41,11 @@ public class OreTreePlacement {
         return false;
     }
 
-    private static boolean readyForPlacement(World level, BlockPos pos){
+    private static boolean readyForPlacement(World level, BlockPos pos) {
         boolean result = true;
-        double sx = 0;
-        double sy;
-        double sz;
+        int sx = 0;
+        int sy;
+        int sz;
         for (int y = 0; y < 5 && result; y++) {
             sy = 1;
             for (int z = 0; z < 5 && result; z++) {
