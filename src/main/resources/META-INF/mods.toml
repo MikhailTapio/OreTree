@@ -3,7 +3,7 @@ loaderVersion="[38,)"
 license="GPL v3"
 [[mods]]
 modId = "ore_tree"
-version = "0.2.3"
+version = "0.2.4"
 displayName = "Ore Tree"
 logoFile="logo.png"
 credits=""
