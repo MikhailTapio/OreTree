@@ -45,7 +45,6 @@ public class OreSaplingBlock extends BushBlock{
     private static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
     private final Item catalystItem;
     private final Tag<Block> rootable;
-    private final boolean dirtable = OTCommonConfig.CAN_PLANT_ON_DIRT.get();
     private final double randomTickValue;
     private final double randomCatalyzeValue;
     private final ResourceLocation treeNBTLocation;
@@ -93,7 +92,7 @@ public class OreSaplingBlock extends BushBlock{
 
     @Override
     public boolean mayPlaceOn(BlockState groundState, @Nonnull BlockGetter worldIn, @Nonnull BlockPos pos) {
-        return groundState.is(rootable) || (dirtable && groundState.is(BlockTags.DIRT));
+        return groundState.is(rootable) || (OTCommonConfig.CAN_PLANT_ON_DIRT.get() && groundState.is(BlockTags.DIRT));
     }
 
     @Override
