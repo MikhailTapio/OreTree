@@ -3,11 +3,11 @@ loaderVersion="[38,)"
 license="GPL v3"
 [[mods]]
 modId = "ore_tree"
-version = "0.2.4"
+version = "0.2.5"
 displayName = "Ore Tree"
-logoFile="logo.png"
-credits=""
-authors="Team Fractal, Wugui_sp, Tapio"
+logoFile = "logo.png"
+credits = "Thanks for PR(s) by holty07"
+authors = "Team Fractal, Wugui_sp, Tapio"
 description='''
 A mod to bring ore tree to Minecraft
 '''
