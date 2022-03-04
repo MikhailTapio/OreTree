@@ -1,0 +1,79 @@
+{
+  "type": "bonsaitrees3:sapling/ore_tree/coal_s",
+  "version": 3,
+  "ref": {
+    "a": {
+      "block": "minecraft:oak_leaves",
+      "properties": {
+        "distance": "2",
+        "persistent": "false"
+      }
+    },
+    "b": {
+      "block": "ore_tree:coal_tree_log"
+    },
+    "c": {
+      "block": "minecraft:oak_leaves",
+      "properties": {
+        "distance": "3",
+        "persistent": "false"
+      }
+    },
+    "d": {
+      "block": "minecraft:oak_leaves",
+      "properties": {
+        "distance": "1",
+        "persistent": "false"
+      }
+    },
+    "e": {
+      "block": "minecraft:oak_leaves",
+      "properties": {
+        "distance": "4",
+        "persistent": "false"
+      }
+    }
+  },
+  "shape": [
+    [
+      "     ",
+      "     ",
+      " cac ",
+      "ecace",
+      "     ",
+      "     "
+    ],
+    [
+      "  a  ",
+      " ada ",
+      "cad c",
+      "cadac",
+      "     ",
+      "     "
+    ],
+    [
+      " ada ",
+      " dbd ",
+      "adbda",
+      "adbda",
+      "  b  ",
+      "  b  "
+    ],
+    [
+      "  a  ",
+      " ada ",
+      "cadac",
+      "cadac",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "     ",
+      " cac ",
+      "ecace",
+      "     ",
+      "     "
+    ]
+  ]
+}

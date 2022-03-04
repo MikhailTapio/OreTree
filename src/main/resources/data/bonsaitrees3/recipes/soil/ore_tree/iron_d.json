@@ -1,0 +1,14 @@
+{
+  "type": "bonsaitrees3:soil",
+  "mod": "ore_tree",
+  "tickModifier": 500,
+  "soil": {
+    "item": "minecraft:deepslate_iron_ore"
+  },
+  "compatibleSoilTags": [
+    "iron_tree"
+  ],
+  "display": {
+    "block": "minecraft:deepslate_iron_ore"
+  }
+}

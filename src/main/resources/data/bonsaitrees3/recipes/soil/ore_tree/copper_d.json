@@ -1,0 +1,14 @@
+{
+  "type": "bonsaitrees3:soil",
+  "mod": "ore_tree",
+  "tickModifier": 300,
+  "soil": {
+    "item": "minecraft:deepslate_copper_ore"
+  },
+  "compatibleSoilTags": [
+    "copper_tree"
+  ],
+  "display": {
+    "block": "minecraft:deepslate_copper_ore"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "bonsaitrees3:soil",
+  "mod": "ore_tree",
+  "tickModifier": 100,
+  "soil": {
+    "item": "minecraft:nether_quartz_ore"
+  },
+  "compatibleSoilTags": [
+    "quartz_tree"
+  ],
+  "display": {
+    "block": "minecraft:nether_quartz_ore"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "secondaries": [
+    {
+      "output": {
+        "tag": "forge:dusts/wood"
+      },
+      "stripping": false
+    },
+    {
+      "output": {
+        "item": "minecraft:stick",
+        "count": 4
+      },
+      "stripping": false
+    }
+  ],
+  "result": {
+    "item": "immersiveengineering:dust_gold",
+    "count": 2
+  },
+  "input": {
+    "item": "ore_tree:gold_tree_log"
+  },
+  "energy": 1600
+}

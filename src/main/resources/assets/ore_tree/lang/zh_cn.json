@@ -1,0 +1,21 @@
+{
+  "block.ore_tree.coal_tree_log": "煤炭树原木",
+  "block.ore_tree.copper_tree_log": "铜树原木",
+  "block.ore_tree.diamond_tree_log": "钻石树原木",
+  "block.ore_tree.emerald_tree_log": "绿宝石树原木",
+  "block.ore_tree.gold_tree_log": "金树原木",
+  "block.ore_tree.iron_tree_log": "铁树原木",
+  "block.ore_tree.lapis_tree_log": "青金石树原木",
+  "block.ore_tree.quartz_tree_log": "石英树原木",
+  "block.ore_tree.redstone_tree_log": "红石树原木",
+  "block.ore_tree.coal_tree_sapling": "煤炭树树苗",
+  "block.ore_tree.copper_tree_sapling": "铜树树苗",
+  "block.ore_tree.diamond_tree_sapling": "钻石树树苗",
+  "block.ore_tree.emerald_tree_sapling": "绿宝石树树苗",
+  "block.ore_tree.gold_tree_sapling": "金树树苗",
+  "block.ore_tree.iron_tree_sapling": "铁树树苗",
+  "block.ore_tree.lapis_tree_sapling": "青金石树树苗",
+  "block.ore_tree.quartz_tree_sapling": "石英树树苗",
+  "block.ore_tree.redstone_tree_sapling": "红石树树苗",
+  "itemGroup.ore_tree.main": "矿物树"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "bonsaitrees3:sapling",
+  "mod": "ore_tree",
+  "sapling": {
+    "item": "ore_tree:diamond_tree_sapling"
+  },
+  "drops": [
+    {
+      "rolls": 5,
+      "chance": 1,
+      "result": {
+        "item": "ore_tree:diamond_tree_log"
+      }
+    },
+    {
+      "rolls": 2,
+      "chance": 0.3,
+      "result": {
+        "item": "minecraft:oak_leaves"
+      },
+      "requiresSilkTouch": true
+    }
+  ],
+  "compatibleSoilTags": [
+    "diamond_tree"
+  ]
+}
