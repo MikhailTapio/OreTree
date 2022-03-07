@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.2.5'
+version = '0.2.5.1'
 group = 'com.teamfractal.ore_tree' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'OreTree-1.18.2'
 

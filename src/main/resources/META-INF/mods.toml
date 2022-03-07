@@ -1,9 +1,9 @@
 modLoader = "javafml"
-loaderVersion = "[38,)"
+loaderVersion = "[40,)"
 license = "GPL v3"
 [[mods]]
 modId = "ore_tree"
-version = "0.2.5"
+version = "0.2.5.1"
 displayName = "Ore Tree"
 logoFile = "logo.png"
 credits = "Thanks for PR(s) by holty07"
@@ -14,6 +14,6 @@ A mod to bring ore tree to Minecraft
 [[dependencies.ore_tree]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.18,1.19)"
+versionRange = "[1.18.2,1.19)"
 ordering = "NONE"
 side = "BOTH"
