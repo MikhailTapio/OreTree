@@ -1,0 +1,16 @@
+{
+  "group": "ore_tree",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:saplings"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "result": {
+    "item": "ore_tree:copper_tree_sapling",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "group": "ore_tree",
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "ore_tree:iron_tree_log"
+  },
+  "result": "minecraft:iron_ingot"
+}
