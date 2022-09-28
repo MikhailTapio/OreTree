@@ -18,12 +18,11 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Random;
 
 import static committee.nova.plr.ore_tree.common.block.action.OreTreePlacement.consumeCatalyst;
 import static committee.nova.plr.ore_tree.common.block.action.OreTreePlacement.tryPlace;
@@ -58,6 +57,7 @@ public class OreSaplingBlock extends PlantBlock {
         return this.getDefaultState().with(AGE, 0);
     }
 
+    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
@@ -68,15 +68,12 @@ public class OreSaplingBlock extends PlantBlock {
         return floor.isIn(rootable);
     }
 
-    public boolean hasRandomTicks(BlockState state) {
-        return state.get(AGE) < 3;
-    }
-
-
+    @Override
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
         return new ItemStack(this);
     }
 
+    @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         int i = state.get(AGE);
 
@@ -89,6 +86,7 @@ public class OreSaplingBlock extends PlantBlock {
         }
     }
 
+    @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         int i = state.get(AGE);
         final var random = world.random;
