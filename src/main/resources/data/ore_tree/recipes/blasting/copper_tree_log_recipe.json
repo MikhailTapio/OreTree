@@ -1,0 +1,10 @@
+{
+  "group": "ore_tree",
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "ore_tree:copper_tree_log"
+  },
+  "result": "minecraft:copper_ingot"
+}
