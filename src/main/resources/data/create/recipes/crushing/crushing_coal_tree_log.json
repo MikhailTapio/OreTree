@@ -1,0 +1,24 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "ore_tree:coal_tree_log"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:coal",
+      "count": 6
+    },
+    {
+      "item": "minecraft:coal",
+      "count": 4,
+      "chance": 0.5
+    },
+    {
+      "item": "minecraft:stick",
+      "chance": 0.5
+    }
+  ],
+  "processingTime": 300
+}

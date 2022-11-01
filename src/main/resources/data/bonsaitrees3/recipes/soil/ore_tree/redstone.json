@@ -1,0 +1,14 @@
+{
+  "type": "bonsaitrees3:soil",
+  "mod": "ore_tree",
+  "tickModifier": 100,
+  "soil": {
+    "item": "minecraft:redstone_ore"
+  },
+  "compatibleSoilTags": [
+    "redstone_tree"
+  ],
+  "display": {
+    "block": "minecraft:redstone_ore"
+  }
+}

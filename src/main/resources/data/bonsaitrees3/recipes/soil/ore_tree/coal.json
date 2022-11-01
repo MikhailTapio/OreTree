@@ -1,0 +1,14 @@
+{
+  "type": "bonsaitrees3:soil",
+  "mod": "ore_tree",
+  "tickModifier": 200,
+  "soil": {
+    "item": "minecraft:coal_ore"
+  },
+  "compatibleSoilTags": [
+    "coal_tree"
+  ],
+  "display": {
+    "block": "minecraft:coal_ore"
+  }
+}

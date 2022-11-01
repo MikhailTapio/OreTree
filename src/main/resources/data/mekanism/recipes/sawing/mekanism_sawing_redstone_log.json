@@ -1,0 +1,16 @@
+{
+  "type": "mekanism:sawing",
+  "input": {
+    "ingredient": {
+      "item": "ore_tree:redstone_tree_log"
+    }
+  },
+  "mainOutput": {
+    "item": "minecraft:redstone",
+    "count": 2
+  },
+  "secondaryOutput": {
+    "item": "mekanism:sawdust"
+  },
+  "secondaryChance": 0.75
+}
