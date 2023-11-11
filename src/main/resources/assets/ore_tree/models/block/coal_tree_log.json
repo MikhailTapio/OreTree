@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ore_tree:block/coal_ore_2",
+    "up": "ore_tree:block/coal_ore_2",
+    "north": "ore_tree:block/coal_log_1",
+    "east": "ore_tree:block/coal_log_1",
+    "south": "ore_tree:block/coal_log_1",
+    "west": "ore_tree:block/coal_log_1",
+    "particle": "ore_tree:block/coal_ore_2"
+  }
+}

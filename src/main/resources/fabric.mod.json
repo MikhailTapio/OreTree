@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "ore_tree",
+  "version": "${version}",
+  "name": "OreTree",
+  "description": "",
+  "authors": [
+    "Committee Nova",
+    "Tapio",
+    "Wugui.sp"
+  ],
+  "contact": {},
+  "license": "AGPL-3.0",
+  "icon": "assets/ore_tree/logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "committee.nova.plr.ore_tree.common.OreTree"
+    ],
+    "client": [
+      "committee.nova.plr.ore_tree.client.OreTreeClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "*"
+  }
+}
